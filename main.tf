@@ -16,7 +16,7 @@ terraform {
 */
 
 resource "google_compute_instance" "vm_git_jenkins_cicd" {
-  name="vm_git_jenkins_cicd"
+  name="cicd"
   machine_type="f1-micro"
 
   network_interface {
