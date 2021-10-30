@@ -33,3 +33,23 @@ resource "google_compute_instance" "vm_git_jenkins_cicd" {
 
 
 }
+
+resource "google_compute_instance" "vm-new" {
+  name="vm-new"
+  machine_type="f1-micro"
+
+  network_interface {
+    network="default"
+  }
+
+  boot_disk {
+    initialize_params{
+        image="rhel-cloud/rhel-8"
+    }
+  }
+    tags = ["image-template",
+    "rhel-image"]
+
+
+}
+
