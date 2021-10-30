@@ -50,6 +50,6 @@ resource "google_compute_instance" "vm-new" {
     tags = ["image-template",
     "rhel-image"]
 
-
+ 
 }
 
