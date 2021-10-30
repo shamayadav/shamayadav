@@ -35,7 +35,7 @@ resource "google_compute_instance" "vm_git_jenkins_cicd" {
 }
 
 resource "google_compute_instance" "vm-new" {
-  name="vm-new"
+  name="new"
   machine_type="f1-micro"
 
   network_interface {
