@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage ("checkout from GIT") {
             steps {
-                git branch: 'master', url: 'https://github.com/shamayadav/shamayadav/tree/main'
+                git branch: 'main', url: 'https://github.com/shamayadav/shamayadav'
             }
         }
         stage ("terraform init") {
