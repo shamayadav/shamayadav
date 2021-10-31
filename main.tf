@@ -28,7 +28,7 @@ resource "google_compute_instance" "vm_git_jenkins_cicd" {
     }
   }
     tags = ["image-template",
-    "rhel-image"]
+    "rhel-image1"]
 
 
 }
