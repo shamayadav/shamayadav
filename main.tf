@@ -13,7 +13,7 @@ terraform {
   }
 }
 
-*/
+
 
 resource "google_compute_instance" "vm_git_jenkins_cicd" {
   name="cicdnew"
@@ -48,8 +48,9 @@ resource "google_compute_instance" "vm-new" {
     }
   }
     tags = ["image-template",
-    "rhel-image2"]
+    "rhel-image5"]
 
  
 }
 
+*/
