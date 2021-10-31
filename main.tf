@@ -5,14 +5,14 @@ provider "google" {
     
 }
 
-
+/*
 terraform {
   backend "gcs"{
       bucket="tf-state-om-tech"
       prefix="terraform/state"
   }
 }
-
+*/
 
 resource "google_compute_instance" "vm_git_jenkins_cicd" {
   name="cicdnew"
