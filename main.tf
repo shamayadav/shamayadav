@@ -5,7 +5,7 @@ provider "google" {
     
 }
 
-/*
+
 terraform {
   backend "gcs"{
       bucket="tf-state-om-tech"
@@ -52,5 +52,3 @@ resource "google_compute_instance" "vm-new" {
 
  
 }
-
-*/
