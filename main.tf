@@ -30,6 +30,16 @@ resource "google_compute_instance" "vm2" {
   }
     tags = ["image-template",
     "rhel-image5"]
+    
+   metadata = {
+    startup-script = <<-EOF
+    sudo su -
+    useradd mgmtbld
+    touch /etc/sudoers.d/mgmtbld
+    cd /etc/sudoers.d
+    echo "%mgmtbld ALL=(ALL:ALL) NOPASSWD:ALL">mgmtbld
+  EOF
+  }
 
 
 }
