@@ -14,7 +14,7 @@ terraform {
   }
 }
 
-*/
+
 resource "google_compute_instance" "vm1" {
   name="vm1"
   machine_type="f1-micro"
@@ -140,3 +140,4 @@ output "vm-address3" {
 output "vm-address4" {
   value=google_compute_instance.vm4.network_interface.0.network_ip
 }
+*/
