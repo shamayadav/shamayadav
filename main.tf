@@ -15,8 +15,8 @@ terraform {
 }
 
 */
-resource "google_compute_instance" "vm_git_jenkins_cicd" {
-  name="cicdnew"
+resource "google_compute_instance" "vm1" {
+  name="vm1"
   machine_type="f1-micro"
 
   network_interface {
@@ -32,23 +32,4 @@ resource "google_compute_instance" "vm_git_jenkins_cicd" {
     "rhel-image5"]
 
 
-}
-
-resource "google_compute_instance" "vm-new" {
-  name="testing-vm"
-  machine_type="f1-micro"
-
-  network_interface {
-    network="default"
-  }
-
-  boot_disk {
-    initialize_params{
-        image="rhel-cloud/rhel-8"
-    }
-  }
-    tags = ["image-template",
-    "rhel-imge"]
-
- 
 }
