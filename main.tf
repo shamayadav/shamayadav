@@ -113,6 +113,7 @@ resource "google_compute_instance" "vm4" {
     tags = ["image-template",
     "rhel-image"]
 
+
     metadata = {
     startup-script = <<-EOF
     sudo su -
