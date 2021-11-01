@@ -1,7 +1,7 @@
 provider "google" {
     project = "zeta-bebop-281216"
     region = "europe-west2"
-    zone = "europe-west2-c"
+    zone = "europe-west2-a"
     
 }
 
