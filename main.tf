@@ -13,7 +13,7 @@ terraform {
       prefix="terraform/state"
   }
 }
-
+*/
 resource "google_compute_instance" "vm1" {
   name="vm1"
   machine_type="f1-micro"
@@ -40,6 +40,7 @@ resource "google_compute_instance" "vm1" {
   EOF
   }
 }
+/*
 #Second VM--
 resource "google_compute_instance" "vm2" {
   name="vm2"
@@ -123,12 +124,12 @@ resource "google_compute_instance" "vm4" {
   EOF
   }
 }
-
+*/
 
 output "vm-address1" {
   value=google_compute_instance.vm1.network_interface.0.network_ip
 }
-
+/*
 output "vm-address2" {
   value=google_compute_instance.vm2.network_interface.0.network_ip
 }
