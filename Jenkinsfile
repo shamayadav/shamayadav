@@ -1,13 +1,12 @@
 pipeline {
     agent any
-    
-    tools {
-        terraform 'terraform'
+    tools{
+        terraform 'terraform12'
     }
     stages {
         stage ("checkout from GIT") {
             steps {
-                git branch: 'main', url: 'https://github.com/shamayadav/shamayadav'
+                checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/shamayadav/shamayadav.git']]])
             }
         }
         stage ("terraform init") {
