@@ -20,6 +20,8 @@ resource "google_compute_instance" "vm1" {
 
   network_interface {
     network="default"
+      access_config{
+      }
   }
 
   boot_disk {
