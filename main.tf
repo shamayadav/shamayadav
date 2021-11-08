@@ -15,7 +15,7 @@ terraform {
 }
 */
 resource "google_compute_instance" "vm1" {
-  name="client1-vm"
+  name="client-vm"
   machine_type="f1-micro"
 
   network_interface {
