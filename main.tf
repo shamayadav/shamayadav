@@ -29,18 +29,7 @@ resource "google_compute_instance" "vm1" {
         image="rhel-cloud/rhel-8"
     }
   }
-    tags = ["image-template",
-    "rhel-image"]
-
-    metadata = {
-    startup-script = <<-EOF
-    sudo su -
-    useradd mgmtbld
-    touch /etc/sudoers.d/mgmtbld
-    cd /etc/sudoers.d
-    echo "%mgmtbld ALL=(ALL:ALL) NOPASSWD:ALL">mgmtbld
-  EOF
-  }
+   
 }
 /*
 #Second VM--
