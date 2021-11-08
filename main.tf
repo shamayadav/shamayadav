@@ -42,7 +42,7 @@ resource "google_compute_instance" "vm1" {
   EOF
   }
 }
-/*
+
 #Second VM--
 resource "google_compute_instance" "vm2" {
   name="vm2"
@@ -70,6 +70,7 @@ resource "google_compute_instance" "vm2" {
   EOF
   }
 }
+/*
 #Third VM--
 resource "google_compute_instance" "vm3" {
   name="vm3"
