@@ -11,6 +11,7 @@ terraform {
   backend "gcs"{
       bucket="tf-state-om-tech"
       prefix="terraform/state"
+      
   }
 }
 */
