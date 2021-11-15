@@ -133,6 +133,9 @@ resource "google_compute_instance" "vm4" {
 output "vm-address1" {
   value=google_compute_instance.vm1.network_interface.0.network_ip
 }
+output "vm-name" {
+  value=google_compute_instance.vm1.name
+}
 
 output "vm-address2" {
   value=google_compute_instance.vm2.network_interface.0.network_ip
