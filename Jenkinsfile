@@ -29,7 +29,7 @@ pipeline {
                 sh 'terraform plan '
             }
         }
-        stage ("terraform apply") {
+        stage ("terraform apply and notify") {
             steps {
                 sh 'terraform apply --auto-approve'
                 sh 'var=$(terraform output vm-address1)'
