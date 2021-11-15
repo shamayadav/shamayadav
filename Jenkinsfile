@@ -32,6 +32,8 @@ pipeline {
         stage ("terraform apply") {
             steps {
                 sh 'terraform apply --auto-approve'
+                sh '$var=terraform output vm-address1'
+                sh 'echo $var'
             }
         }
     }
