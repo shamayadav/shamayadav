@@ -43,7 +43,7 @@ resource "google_compute_instance" "vm1" {
   EOF
   }
 }
-
+/*
 #Second VM--
 resource "google_compute_instance" "vm2" {
   name="vm2"
@@ -71,7 +71,7 @@ resource "google_compute_instance" "vm2" {
   EOF
   }
 }
-/*
+
 #Third VM--
 resource "google_compute_instance" "vm3" {
   name="vm3"
@@ -136,11 +136,11 @@ output "vm-address1" {
 output "vm-name" {
   value=google_compute_instance.vm1.name
 }
-
+/*
 output "vm-address2" {
   value=google_compute_instance.vm2.network_interface.0.network_ip
 }
-/*
+
 output "vm-address3" {
   value=google_compute_instance.vm3.network_interface.0.network_ip
 }
