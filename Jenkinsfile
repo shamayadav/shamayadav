@@ -33,7 +33,8 @@ pipeline {
             steps {
                 sh 'terraform apply --auto-approve'
                 sh 'var=$(terraform output vm-address1)'
-                sh 'echo $var'
+                sh 'var1=$(terraform output vm-address2)'
+                sh 'echo $var and $var1'
             }
         }
     }
