@@ -21,10 +21,7 @@ pipeline {
         stage ("terraform apply and notify") {
             steps {
                 sh 'terraform apply --auto-approve'
-                sh 'var=$(terraform output vm-address1)'
-                sh 'var1=$(terraform output vm-name)'
-                sh 'echo Name is $var1 and IP is $var'
-                //mail bcc: '', body: 'VM name is $var1 and VM IP is $var', cc: '', from: '', replyTo: '', subject: 'New VM created', to: 'vijay209201@gmail.com'
+                //mail bcc: '', body: 'New VM created', cc: '', from: '', replyTo: '', subject: 'New VM created', to: 'vijay209201@gmail.com'
             }
         }
     }
