@@ -27,7 +27,7 @@ resource "google_compute_instance" "vm1" {
 
   boot_disk {
     initialize_params{
-        image="rhel-cloud/rhel-8"
+        image="rhel-cloud/rhel-7"
     }
   }
        tags = ["image-template",
@@ -55,7 +55,7 @@ resource "google_compute_instance" "vm2" {
 
   boot_disk {
     initialize_params{
-        image="rhel-cloud/rhel-8"
+        image="rhel-cloud/rhel-7"
     }
   }
     tags = ["image-template",
@@ -83,7 +83,7 @@ resource "google_compute_instance" "vm3" {
 
   boot_disk {
     initialize_params{
-        image="rhel-cloud/rhel-8"
+        image="rhel-cloud/rhel-7"
     }
   }
     tags = ["image-template",
@@ -111,7 +111,7 @@ resource "google_compute_instance" "vm4" {
 
   boot_disk {
     initialize_params{
-        image="rhel-cloud/rhel-8"
+        image="rhel-cloud/rhel-7"
     }
   }
     tags = ["image-template",
@@ -130,9 +130,7 @@ resource "google_compute_instance" "vm4" {
 }
 */
 
-output "vm-address1" {
-  value=google_compute_instance.vm1.address
-}
+
 output "vm-name" {
   value=google_compute_instance.vm1.name
 }
